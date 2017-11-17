@@ -1,15 +1,14 @@
 import dom from '../src/index';
 
 const setupDOM = () => document.body.innerHTML = 
-`<div class="test" id="parent1" custom="custom1">
-  <div class="test" id="child1"></div>
-  <div class="test1" id="child2"></div>
-<div class="test" id="child3"></div>
-</div>
-<div class="test" id="parent2" custom="custom1"></div>`;
+	`<div class="test" id="parent1" custom="custom1">
+	  <div class="test" id="child1"></div>
+	  <div class="test1" id="child2"></div>
+	<div class="test" id="child3"></div>
+	</div>
+	<div class="test" id="parent2" custom="custom1"></div>`;
 
 describe('first', () => {
-
     it('returns first element by class name', () => {
         // Arrange
         setupDOM();
@@ -65,7 +64,7 @@ describe('all', () => {
         
         // Assert
         expect(result.length).toBe(1);
-		expect(result[0].id).toBe('child2');
+	    expect(result[0].id).toBe('child2');
     });
 	
     it('returns collection with single item by id', () => {
@@ -77,7 +76,7 @@ describe('all', () => {
         
         // Assert
         expect(result.length).toBe(1);
-		expect(result[0].id).toBe('parent2');
+        expect(result[0].id).toBe('parent2');
     });
 	
     it('returns collection of elements by custom attribute', () => {
@@ -89,8 +88,8 @@ describe('all', () => {
 
         // Assert
         expect(result.length).toBe(2);
-		expect(result[0].id).toBe('parent1');
-		expect(result[1].id).toBe('parent2');
+        expect(result[0].id).toBe('parent1');
+        expect(result[1].id).toBe('parent2');
     });
 	
     it('returns collection of child elements when parent selector specified', () => {
@@ -102,8 +101,8 @@ describe('all', () => {
 
         // Assert
         expect(result.length).toBe(2);
-		expect(result[0].id).toBe('child1');
-		expect(result[1].id).toBe('child3');
+        expect(result[0].id).toBe('child1');
+        expect(result[1].id).toBe('child3');
     });
 });
 

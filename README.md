@@ -1,4 +1,4 @@
-# Fozzie Component Template
+# f-dom
 
 [![npm version](https://badge.fury.io/js/%40justeat%2Ff-dom.svg)](https://badge.fury.io/js/%40justeat%2Ff-dom)
 [![Build Status](https://travis-ci.org/justeat/f-dom.svg)](https://travis-ci.org/justeat/f-dom)
@@ -6,7 +6,7 @@
 [![Dependency Status](https://gemnasium.com/badges/github.com/justeat/f-dom.svg)](https://gemnasium.com/github.com/justeat/f-dom)
 
 
-Fozzie JS DOM queries library, built on top of [qwery] (https://www.npmjs.com/package/qwery) selector engine.
+Fozzie JS DOM queries library, built on top of [qwery](https://www.npmjs.com/package/qwery) selector engine.
 
 ## Adding `f-dom` to your project
 
@@ -22,8 +22,8 @@ import dom from '@justeat/f-dom';
 
 ## Usage
 
-Each method has 2 parameters `selector` and `root` (optional). If `root` is not specified, search will be performed for all elements in DOM.
-If it is specified, search will be performed for the child elements of `root`.
+Each method has 2 parameters: mandatory `selector` and optional `root`. 
+If `root` parameter is not specified, search will be performed for all elements in the DOM, otherwise, search will be performed for `root` child elements.
 
 `first` method returns first element in the DOM for the specified selector (class or id).
 
