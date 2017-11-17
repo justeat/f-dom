@@ -10,3 +10,4 @@ v0.1.0
 
 ### Added
 - Added initial project files.
+- DOM module and unit tests
