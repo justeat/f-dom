@@ -1,11 +1,12 @@
 import dom from '../src/index';
 
-const setupDOM = () => document.body.innerHTML = `<div class="test" id="parent1" custom="custom1">
-													<div class="test" id="child1"></div>
-													<div class="test1" id="child2"></div>
-													<div class="test" id="child3"></div>
-												  </div>
-												  <div class="test" id="parent2" custom="custom1"></div>`;
+const setupDOM = () => document.body.innerHTML = 
+`<div class="test" id="parent1" custom="custom1">
+  <div class="test" id="child1"></div>
+  <div class="test1" id="child2"></div>
+<div class="test" id="child3"></div>
+</div>
+<div class="test" id="parent2" custom="custom1"></div>`;
 
 describe('first', () => {
 
@@ -20,7 +21,7 @@ describe('first', () => {
         expect(result.id).toBe('parent1');
     });
 	
-	it('returns first element by id', () => {
+    it('returns first element by id', () => {
         // Arrange
         setupDOM();
 
@@ -31,7 +32,7 @@ describe('first', () => {
         expect(result.id).toBe('child2');
     });
 	
-	it('returns first child element when parent selector specified', () => {
+    it('returns first child element when parent selector specified', () => {
         // Arrange
         setupDOM();
 
@@ -55,7 +56,7 @@ describe('all', () => {
         expect(result.length).toBe(4);
     });
 	
-	it('returns collection with single item by class name', () => {
+    it('returns collection with single item by class name', () => {
         // Arrange
         setupDOM();
 
@@ -67,7 +68,7 @@ describe('all', () => {
 		expect(result[0].id).toBe('child2');
     });
 	
-	it('returns collection with single item by id', () => {
+    it('returns collection with single item by id', () => {
         // Arrange
         setupDOM();
 
@@ -79,7 +80,7 @@ describe('all', () => {
 		expect(result[0].id).toBe('parent2');
     });
 	
-	it('returns collection of elements by custom attribute', () => {
+    it('returns collection of elements by custom attribute', () => {
         // Arrange
         setupDOM();
 
@@ -92,7 +93,7 @@ describe('all', () => {
 		expect(result[1].id).toBe('parent2');
     });
 	
-	it('returns collection of child elements when parent selector specified', () => {
+    it('returns collection of child elements when parent selector specified', () => {
         // Arrange
         setupDOM();
 
@@ -118,7 +119,7 @@ describe('exists', () => {
         expect(result).toBe(true);
     });
 	
-	it('returns true if element exists by id', () => {
+    it('returns true if element exists by id', () => {
         // Arrange
         setupDOM();
 
@@ -129,7 +130,7 @@ describe('exists', () => {
         expect(result).toBe(true);
     });
 	
-	it('returns false if element doesn`t exist by class name', () => {
+    it('returns false if element doesn`t exist by class name', () => {
         // Arrange
         setupDOM();
 
@@ -140,7 +141,7 @@ describe('exists', () => {
         expect(result).toBe(false);
     });
 	
-	it('returns false if element doesn`t exist by id', () => {
+    it('returns false if element doesn`t exist by id', () => {
         // Arrange
         setupDOM();
 
@@ -151,7 +152,7 @@ describe('exists', () => {
         expect(result).toBe(false);
     });
 	
-	it('returns true if element exists when parent selector specified', () => {
+    it('returns true if element exists when parent selector specified', () => {
         // Arrange
         setupDOM();
 
@@ -162,7 +163,7 @@ describe('exists', () => {
         expect(result).toBe(true);
     });
 	
-	it('returns false if element doesn`t exist when parent selector specified', () => {
+    it('returns false if element doesn`t exist when parent selector specified', () => {
         // Arrange
         setupDOM();
 
