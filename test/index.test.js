@@ -106,6 +106,69 @@ describe('all', () => {
     });
 });
 
+describe('all - short syntax', () => {
+    it('returns correct number of elements by class name', () => {
+        // Arrange
+        setupDOM();
+
+        // Act
+        const result = $('.test');
+        
+        // Assert
+        expect(result.length).toBe(4);
+    });
+	
+    it('returns collection with single item by class name', () => {
+        // Arrange
+        setupDOM();
+
+        // Act
+        const result = $('.test1');
+        
+        // Assert
+        expect(result.length).toBe(1);
+        expect(result[0].id).toBe('child2');
+    });
+	
+    it('returns collection with single item by id', () => {
+        // Arrange
+        setupDOM();
+
+        // Act
+        const result = $('#parent2');
+        
+        // Assert
+        expect(result.length).toBe(1);
+        expect(result[0].id).toBe('parent2');
+    });
+	
+    it('returns collection of elements by custom attribute', () => {
+        // Arrange
+        setupDOM();
+
+        // Act
+        const result = $('[custom]');
+
+        // Assert
+        expect(result.length).toBe(2);
+        expect(result[0].id).toBe('parent1');
+        expect(result[1].id).toBe('parent2');
+    });
+	
+    it('returns collection of child elements when parent selector specified', () => {
+        // Arrange
+        setupDOM();
+
+        // Act
+        const result = $('.test', '#parent1');
+
+        // Assert
+        expect(result.length).toBe(2);
+        expect(result[0].id).toBe('child1');
+        expect(result[1].id).toBe('child3');
+    });
+});
+
 describe('exists', () => {
     it('returns true if element exists by class name', () => {
         // Arrange
