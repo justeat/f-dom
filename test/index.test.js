@@ -1,4 +1,4 @@
-import dom from '../src/index';
+import dom from '../src';
 
 const setupDOM = () => document.body.innerHTML = 
 	`<div class="test" id="parent1" custom="custom1">
@@ -64,7 +64,7 @@ describe('all', () => {
         
         // Assert
         expect(result.length).toBe(1);
-	    expect(result[0].id).toBe('child2');
+        expect(result[0].id).toBe('child2');
     });
 	
     it('returns collection with single item by id', () => {

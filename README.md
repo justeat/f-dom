@@ -25,7 +25,7 @@ import dom from '@justeat/f-dom';
 Each method has 2 parameters: mandatory `selector` and optional `root`. 
 If `root` parameter is not specified, search will be performed for all elements in the DOM, otherwise, search will be performed for `root` child elements.
 
-`first` method returns first element in the DOM for the specified selector (class or id).
+`first` method returns first element in the DOM for the specified selector.
 
 ```js
 const element = dom.first('.btn');

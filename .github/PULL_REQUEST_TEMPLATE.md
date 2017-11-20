@@ -6,11 +6,6 @@ __*Delete the parts of this template that aren’t relevant to the current PR yo
 
 _A short description of your PR goes here._
 
-## Platform Review Checks
-
-- [ ] The code has been tested and reviewed on a QA Server
-- [ ] Feature Tests have been written/updated and run (as required)
-
 ## UI Review Checks
 
 ![image](https://media.github.je-labs.com/user/326/files/c1e6632c-e23e-11e6-91e2-4625e4f89d6d)
