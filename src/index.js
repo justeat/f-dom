@@ -1,7 +1,7 @@
 import $ from 'qwery';
 
 /**
-* Returns first element in the DOM for the specified selector. 
+* Returns first element in the DOM for the specified selector.
 *
 * @param {string} selector
 * @param {string} root (optional) - if defined, search is performed relatively from this element
@@ -9,7 +9,7 @@ import $ from 'qwery';
 * @return {Element}
 */
 const first = (selector, root = null) => $(selector, root)[0];
-	
+
 /**
 * Returns all elements in the DOM for the specified selector.
 *
@@ -19,9 +19,9 @@ const first = (selector, root = null) => $(selector, root)[0];
 * @return {Array.<Element>}
 */
 const all = (selector, root = null) => $(selector, root);
-	
+
 /**
-* Returns true, if at least one element exists in the DOM, otherwise returns false. 
+* Returns true, if at least one element exists in the DOM, otherwise returns false.
 *
 * @param {string} selector
 * @param {string} root (optional) - if defined, search is performed relatively from this element

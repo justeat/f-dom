@@ -1,12 +1,13 @@
 import $ from '../src';
 
-const setupDOM = () => document.body.innerHTML = 
-	`<div class="test" id="parent1" custom="custom1">
-	  <div class="test" id="child1"></div>
-	  <div class="test1" id="child2"></div>
-	<div class="test" id="child3"></div>
-	</div>
-	<div class="test" id="parent2" custom="custom1"></div>`;
+const setupDOM = () => {
+    document.body.innerHTML = `<div class="test" id="parent1" custom="custom1">
+<div class="test" id="child1"></div>
+<div class="test1" id="child2"></div>
+<div class="test" id="child3"></div>
+</div>
+<div class="test" id="parent2" custom="custom1"></div>`;
+};
 
 describe('first', () => {
     it('returns first element by class name', () => {
@@ -15,22 +16,22 @@ describe('first', () => {
 
         // Act
         const result = $.first('.test');
-        
+
         // Assert
         expect(result.id).toBe('parent1');
     });
-	
+
     it('returns first element by id', () => {
         // Arrange
         setupDOM();
 
         // Act
         const result = $.first('#child2');
-        
+
         // Assert
         expect(result.id).toBe('child2');
     });
-	
+
     it('returns first child element when parent selector specified', () => {
         // Arrange
         setupDOM();
@@ -50,35 +51,35 @@ describe('all', () => {
 
         // Act
         const result = $.all('.test');
-        
+
         // Assert
         expect(result.length).toBe(4);
     });
-	
+
     it('returns collection with single item by class name', () => {
         // Arrange
         setupDOM();
 
         // Act
         const result = $.all('.test1');
-        
+
         // Assert
         expect(result.length).toBe(1);
         expect(result[0].id).toBe('child2');
     });
-	
+
     it('returns collection with single item by id', () => {
         // Arrange
         setupDOM();
 
         // Act
         const result = $.all('#parent2');
-        
+
         // Assert
         expect(result.length).toBe(1);
         expect(result[0].id).toBe('parent2');
     });
-	
+
     it('returns collection of elements by custom attribute', () => {
         // Arrange
         setupDOM();
@@ -91,7 +92,7 @@ describe('all', () => {
         expect(result[0].id).toBe('parent1');
         expect(result[1].id).toBe('parent2');
     });
-	
+
     it('returns collection of child elements when parent selector specified', () => {
         // Arrange
         setupDOM();
@@ -113,35 +114,35 @@ describe('all - short syntax', () => {
 
         // Act
         const result = $('.test');
-        
+
         // Assert
         expect(result.length).toBe(4);
     });
-	
+
     it('returns collection with single item by class name', () => {
         // Arrange
         setupDOM();
 
         // Act
         const result = $('.test1');
-        
+
         // Assert
         expect(result.length).toBe(1);
         expect(result[0].id).toBe('child2');
     });
-	
+
     it('returns collection with single item by id', () => {
         // Arrange
         setupDOM();
 
         // Act
         const result = $('#parent2');
-        
+
         // Assert
         expect(result.length).toBe(1);
         expect(result[0].id).toBe('parent2');
     });
-	
+
     it('returns collection of elements by custom attribute', () => {
         // Arrange
         setupDOM();
@@ -154,7 +155,7 @@ describe('all - short syntax', () => {
         expect(result[0].id).toBe('parent1');
         expect(result[1].id).toBe('parent2');
     });
-	
+
     it('returns collection of child elements when parent selector specified', () => {
         // Arrange
         setupDOM();
@@ -176,44 +177,44 @@ describe('exists', () => {
 
         // Act
         const result = $.exists('.test');
-        
+
         // Assert
         expect(result).toBe(true);
     });
-	
+
     it('returns true if element exists by id', () => {
         // Arrange
         setupDOM();
 
         // Act
         const result = $.exists('#child2');
-        
+
         // Assert
         expect(result).toBe(true);
     });
-	
+
     it('returns false if element doesn`t exist by class name', () => {
         // Arrange
         setupDOM();
 
         // Act
         const result = $.exists('.test2');
-        
+
         // Assert
         expect(result).toBe(false);
     });
-	
+
     it('returns false if element doesn`t exist by id', () => {
         // Arrange
         setupDOM();
 
         // Act
         const result = $.exists('#parent3');
-        
+
         // Assert
         expect(result).toBe(false);
     });
-	
+
     it('returns true if element exists when parent selector specified', () => {
         // Arrange
         setupDOM();
@@ -224,7 +225,7 @@ describe('exists', () => {
         // Assert
         expect(result).toBe(true);
     });
-	
+
     it('returns false if element doesn`t exist when parent selector specified', () => {
         // Arrange
         setupDOM();
