@@ -9,7 +9,7 @@ const dom = {
 	*
 	* @return {Element}
 	*/
-    first: (selector, root = null) => $(selector, root)[0],
+	first: (selector, root = null) => $(selector, root)[0],
 	
 	/**
 	* Returns all elements in the DOM for the specified selector.
@@ -19,7 +19,7 @@ const dom = {
 	*
 	* @return {Array.<Element>}
 	*/
-    all: (selector, root = null) => $(selector, root),
+	all: (selector, root = null) => $(selector, root),
 	
 	/**
 	* Returns true, if at least one element exists in the DOM, otherwise returns false. 
@@ -29,7 +29,7 @@ const dom = {
 	*
 	* @return {boolean}
 	*/
-    exists: (selector, root = null) => $(selector, root).length > 0
+	exists: (selector, root = null) => $(selector, root).length > 0
 };
 
 export default dom;
