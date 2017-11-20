@@ -1,4 +1,4 @@
-import dom from '../src';
+import $ from '../src';
 
 const setupDOM = () => document.body.innerHTML = 
 	`<div class="test" id="parent1" custom="custom1">
@@ -14,7 +14,7 @@ describe('first', () => {
         setupDOM();
 
         // Act
-        const result = dom.first('.test');
+        const result = $.first('.test');
         
         // Assert
         expect(result.id).toBe('parent1');
@@ -25,7 +25,7 @@ describe('first', () => {
         setupDOM();
 
         // Act
-        const result = dom.first('#child2');
+        const result = $.first('#child2');
         
         // Assert
         expect(result.id).toBe('child2');
@@ -36,7 +36,7 @@ describe('first', () => {
         setupDOM();
 
         // Act
-        const result = dom.first('.test', '#parent1');
+        const result = $.first('.test', '#parent1');
 
         // Assert
         expect(result.id).toBe('child1');
@@ -49,7 +49,7 @@ describe('all', () => {
         setupDOM();
 
         // Act
-        const result = dom.all('.test');
+        const result = $.all('.test');
         
         // Assert
         expect(result.length).toBe(4);
@@ -60,7 +60,7 @@ describe('all', () => {
         setupDOM();
 
         // Act
-        const result = dom.all('.test1');
+        const result = $.all('.test1');
         
         // Assert
         expect(result.length).toBe(1);
@@ -72,7 +72,7 @@ describe('all', () => {
         setupDOM();
 
         // Act
-        const result = dom.all('#parent2');
+        const result = $.all('#parent2');
         
         // Assert
         expect(result.length).toBe(1);
@@ -84,7 +84,7 @@ describe('all', () => {
         setupDOM();
 
         // Act
-        const result = dom.all('[custom]');
+        const result = $.all('[custom]');
 
         // Assert
         expect(result.length).toBe(2);
@@ -97,7 +97,7 @@ describe('all', () => {
         setupDOM();
 
         // Act
-        const result = dom.all('.test', '#parent1');
+        const result = $.all('.test', '#parent1');
 
         // Assert
         expect(result.length).toBe(2);
@@ -112,7 +112,7 @@ describe('exists', () => {
         setupDOM();
 
         // Act
-        const result = dom.exists('.test');
+        const result = $.exists('.test');
         
         // Assert
         expect(result).toBe(true);
@@ -123,7 +123,7 @@ describe('exists', () => {
         setupDOM();
 
         // Act
-        const result = dom.exists('#child2');
+        const result = $.exists('#child2');
         
         // Assert
         expect(result).toBe(true);
@@ -134,7 +134,7 @@ describe('exists', () => {
         setupDOM();
 
         // Act
-        const result = dom.exists('.test2');
+        const result = $.exists('.test2');
         
         // Assert
         expect(result).toBe(false);
@@ -145,7 +145,7 @@ describe('exists', () => {
         setupDOM();
 
         // Act
-        const result = dom.exists('#parent3');
+        const result = $.exists('#parent3');
         
         // Assert
         expect(result).toBe(false);
@@ -156,7 +156,7 @@ describe('exists', () => {
         setupDOM();
 
         // Act
-        const result = dom.exists('.test1', '#parent1');
+        const result = $.exists('.test1', '#parent1');
 
         // Assert
         expect(result).toBe(true);
@@ -167,7 +167,7 @@ describe('exists', () => {
         setupDOM();
 
         // Act
-        const result = dom.exists('.test1', '#parent2');
+        const result = $.exists('.test1', '#parent2');
 
         // Assert
         expect(result).toBe(false);

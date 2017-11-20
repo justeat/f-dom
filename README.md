@@ -17,7 +17,7 @@ yarn add @justeat/f-dom
 Then, inside your script import `f-dom`.
 
 ```js
-import dom from '@justeat/f-dom';
+import $ from '@justeat/f-dom';
 ```
 
 ## Usage
@@ -28,23 +28,23 @@ If `root` parameter is not specified, search will be performed for all elements 
 `first` method returns first element in the DOM for the specified selector.
 
 ```js
-const element = dom.first('.btn');
+const element = $.first('.btn');
 ...
-const element = dom.first('#btn', '.container');
+const element = $.first('#btn', '.container');
 ```
 
 `all` method returns all elements in the DOM for the specified selector.
 
 ```js
-const element = dom.all('.btn');
+const element = $.all('.btn');
 ...
-const element = dom.all('.btn', '.container');
+const element = $.all('.btn', '.container');
 ```
 
 `exists` method returns true, if at least one element exists in the DOM, otherwise returns false.
 
 ```js
-const exists = dom.exists('.btn');
+const exists = $.exists('.btn');
 ...
-const exists = dom.exists('.btn', '.container');
+const exists = $.exists('.btn', '.container');
 ```
