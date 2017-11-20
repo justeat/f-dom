@@ -39,6 +39,8 @@ const element = $.first('#btn', '.container');
 const element = $.all('.btn');
 ...
 const element = $.all('.btn', '.container');
+...
+const element = $('.btn'); // short syntax
 ```
 
 `exists` method returns true, if at least one element exists in the DOM, otherwise returns false.
