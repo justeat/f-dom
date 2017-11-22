@@ -1,8 +1,11 @@
 {
   "name": "@justeat/f-dom",
   "description": "Fozzie JS DOM queries library.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "homepage": "https://github.com/justeat/f-dom",
   "contributors": [
     "Github contributors <https://github.com/justeat/f-dom/graphs/contributors>"
