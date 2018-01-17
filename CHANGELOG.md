@@ -4,6 +4,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+v0.1.2
+------------------------------
+*January 17, 2018*
+
+### Added
+- Added concurrently to run npm scripts concurrently...!
+
+### Removed
+- Removed duplicate `gulp-build-fozzie` reference in `dependencies`.
+
+
 v0.1.1
 ------------------------------
 *November 22, 2017*
