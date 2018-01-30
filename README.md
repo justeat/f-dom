@@ -1,4 +1,4 @@
-# f-dom
+# f-dom :bear:
 
 [![npm version](https://badge.fury.io/js/%40justeat%2Ff-dom.svg)](https://badge.fury.io/js/%40justeat%2Ff-dom)
 [![Build Status](https://travis-ci.org/justeat/f-dom.svg)](https://travis-ci.org/justeat/f-dom)
@@ -22,7 +22,7 @@ import $ from '@justeat/f-dom';
 
 ## Usage
 
-Each method has 2 parameters: mandatory `selector` and optional `root`. 
+Each method has 2 parameters: mandatory `selector` and optional `root`.
 If `root` parameter is not specified, search will be performed for all elements in the DOM, otherwise, search will be performed for `root` child elements.
 
 `first` method returns first element in the DOM for the specified selector.
