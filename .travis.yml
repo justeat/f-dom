@@ -10,7 +10,8 @@ before_script:
   - yarn run lint
 
 script:
+  - yarn danger ci
   - yarn test:cover
-  
+
 after_success:
   - yarn run test:cover:CI
