@@ -3,6 +3,27 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+v1.0.0
+------------------------------
+*September 25, 2018*
+
+### Added
+- Snyk badge to readme.
+
+### Changed
+- Bumped to version 1.0.0 as this repo is public.
+- Upgraded to babel 7.
+- Updated module dependencies.
+- Using eslint and jest directory rather than `gulp-build-fozzie` to improve install time.
+- Clean `/dist` directory before compiling.
+- Travis uses node v8 & v10 to run builds.
+- License year updated.
+- Danger file updated.
+- Travis build results published to slack channel.
+- Jest config updated.
+- Readme layout updated.
+
+
 v0.4.0
 ------------------------------
 *March 9, 2018*
