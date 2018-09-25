@@ -7,9 +7,9 @@ const isTrivial = bodyAndTitle.includes('#trivial');
 if (!isTrivial) {
     // Fail if the title of the PR isn't in the format of a version i.e. vX.X.X (such as v1.4.0)
     const versionRegex = /^(v[0-9]+\.[0-9]+\.[0-9]+)/;
-    const isPRTitleVersioned = (danger.github.pr.title).match(versionRegex);
+    const isPRTitleVersioned = danger.github.pr.title.match(versionRegex);
     if (!isPRTitleVersioned) {
-        fail(`:exclamation: PR title should start with the package version in the format v(x.x.x) (such as v1.4.0)`);
+        fail(':exclamation: PR title should start with the package version in the format v(x.x.x) (such as v1.4.0)');
     }
 
     // Fail if there isn’t a CHANGELOG entry – should update for every PR
@@ -17,7 +17,6 @@ if (!isTrivial) {
         const changelogLink = 'https://github.com/justeat/f-dom/blob/master/CHANGELOG.md';
         fail(`:memo: Please include a CHANGELOG entry. You can find the current version at <a href="${changelogLink}">CHANGELOG.md</a>`);
     }
-
 
     // Check for version update
     const hasPackageJsonChanged = danger.git.modified_files.includes('package.json');

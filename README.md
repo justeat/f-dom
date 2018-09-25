@@ -1,12 +1,18 @@
-# f-dom :bear:
+<div align="center">
+<h1>f-dom</h1>
+
+<img width="125" alt="Fozzie Bear" src="bear.png" />
+
+<p>Fozzie JS DOM queries library, built on top of <a href="https://www.npmjs.com/package/qwery">the qwery selector engine</a>.</p>
+</div>
+
+---
 
 [![npm version](https://badge.fury.io/js/%40justeat%2Ff-dom.svg)](https://badge.fury.io/js/%40justeat%2Ff-dom)
 [![Build Status](https://travis-ci.org/justeat/f-dom.svg)](https://travis-ci.org/justeat/f-dom)
 [![Coverage Status](https://coveralls.io/repos/github/justeat/f-dom/badge.svg)](https://coveralls.io/github/justeat/f-dom)
-[![Dependency Status](https://gemnasium.com/badges/github.com/justeat/f-dom.svg)](https://gemnasium.com/github.com/justeat/f-dom)
+[![Known Vulnerabilities](https://snyk.io/test/github/justeat/f-dom/badge.svg?targetFile=package.json)](https://snyk.io/test/github/justeat/f-dom?targetFile=package.json)
 
-
-Fozzie JS DOM queries library, built on top of [qwery](https://www.npmjs.com/package/qwery) selector engine.
 
 ## Adding `f-dom` to your project
 

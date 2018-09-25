@@ -1,12 +1,14 @@
 import $ from '../src';
 
 const setupDOM = () => {
-    document.body.innerHTML = `<div class="test" id="parent1" custom="custom1">
-<div class="test" id="child1"></div>
-<div class="test1" id="child2"></div>
-<div class="test" id="child3"></div>
-</div>
-<div class="test" id="parent2" custom="custom1"></div>`;
+    document.body.innerHTML = `
+        <div class="test" id="parent1" custom="custom1">
+            <div class="test" id="child1"></div>
+            <div class="test1" id="child2"></div>
+            <div class="test" id="child3"></div>
+        </div>
+        <div class="test" id="parent2" custom="custom1">
+        </div>`;
 };
 
 describe('first', () => {
