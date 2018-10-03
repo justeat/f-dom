@@ -10,6 +10,7 @@ v1.1.0
 
 ### Changed
 - Updated module dependencies.
+- Tweaked Travis config for notifications.
 
 
 v1.0.0
